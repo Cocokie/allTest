@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.lix.mapper.UserMapper">
+    <select id="findUser" parameterType="int" resultType="com.lix.domain.User">
+        select  *from mybatis where name like '%${value}%'
+    </select>
+    <insert id="addUser" parameterType="com.lix.domain.User">
+        insert into mybatis(name,description) values(#{name},#{description})
+    </insert>
+    <delete id="deleteUser" parameterType="com.lix.domain.User">
+        delete from mybatis where name=#{name}
+    </delete>
+    <update id="updateUser" parameterType="com.lix.domain.User">
+        update mybatis set description=#{description} where name=#{name}
+    </update>
+    <select id="findAll" resultType="user">
+        select *from mybatis
+    </select>
+</mapper>

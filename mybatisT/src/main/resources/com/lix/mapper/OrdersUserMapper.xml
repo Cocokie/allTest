@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lix.mapper.OrdersUserMapper">
+    <!--<cache/>-->
+    <resultMap id="ordersLazying" type="orders">
+        <id column="id" property="id"></id>
+        <result column="user_id" property="userId"></result>
+        <result column="number" property="number"></result>
+        <result column="note" property="note"></result>
+        <association property="user" javaType="user" select="findUser" column="user_id">
+            <result column="username" property="username"></result>
+            <result column="sex" property="sex"></result>
+        </association>
+    </resultMap>
+    <select id="findOrder" resultMap="ordersLazying">
+        select *from orders
+    </select>
+    <select id="findUser" resultType="user" parameterType="int">
+        select * from user where id=#{id};
+    </select>
+
+    <update id="updateUser" parameterType="user">
+        update user set username = #{username} where
+    </update>
+
+    <insert id="insertUser" parameterType="user">
+        insert into user (username,birthday,sex,address) values(#{username},#{birthday},#{sex},#{address})
+    </insert>
+    
+    <select id="findOrdersUser" resultType="ordersuser">
+        select orders.*,user.username,user.sex from orders,user where orders.user_id=user.id
+    </select>
+    <select id="findOrdersUserMap" resultMap="findOrdersUserMap">
+        select orders.*,user.username,user.sex from orders,user where orders.user_id=user.id
+    </select>
+    <resultMap id="findOrdersUserMap" type="orders">
+        <id column="id" property="id"></id>
+        <result column="userId" property="userId"></result>
+        <result column="number" property="number"></result>
+        <result column="note" property="note"></result>
+        <association property="user" javaType="user">
+            <result column="username" property="username"></result>
+            <result column="sex" property="sex"></result>
+        </association>
+    </resultMap>
+    <select id="findOrdersDetails" resultMap="findOrdersDetailsMap" >
+    SELECT * FROM orders,orderdetail where orderdetail.orders_id=orders.id;
+</select>
+    <resultMap id="findOrdersDetailsMap" type="orders">
+        <id column="id" property="id"></id>
+        <result column="userId" property="userId"></result>
+        <result column="number" property="number"></result>
+        <collection property="orderdetails" ofType="orderdetail">
+            <result column="orders_id" property="ordersId"></result>
+            <result column="items_id" property="itemsId"></result>
+            <result column="items_num" property="itemsNum"></result>
+        </collection>
+
+    </resultMap>
+    <select id="findMost" resultMap="most">
+        SELECT * FROM user,items,orderdetail,orders where user.id=orders.user_id and orderdetail.orders_id=orders.id and orderdetail.id=items.id
+    </select>
+    <resultMap id="most" type="user">
+        <id column="id" property="id"></id>
+        <result column="username" property="username"></result>
+        <result column="sex" property="sex"></result>
+        <collection property="orders" ofType="orders">
+            <result column="user_id" property="userId"></result>
+            <result column="number" property="number"></result>
+            <collection property="orderdetails" ofType="orderdetail">
+                <result column="orders_id" property="ordersId"></result>
+                <result column="items_id" property="itemsId"></result>
+                <result column="items_num" property="itemsNum"></result>
+                <association property="it" javaType="items">
+                    <result column="name" property="name"></result>
+                    <result column="price" property="price"></result>
+                    <result column="detail" property="detail"></result>
+                    <result column="pic" property="pic"></result>
+                </association>
+            </collection>
+        </collection>
+
+    </resultMap>
+</mapper>

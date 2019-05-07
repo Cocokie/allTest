@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.lix.mapper.UserMapper">
+    <resultMap id="userResultMap" type="user">
+        <id column="id" property="id"></id>
+        <!-- <result column="name" property="name"></result>-->
+        <result column="des" property="description"></result>
+    </resultMap>
+    <select id="findUser" parameterType="int" resultType="com.lix.domain.User">
+        select  *from mybatis where name like '%${value}%'
+    </select>
+    <insert id="addUser" parameterType="com.lix.domain.User">
+        insert into mybatis(name,description) values(#{name},#{description})
+    </insert>
+    <delete id="deleteUser" parameterType="com.lix.domain.User">
+        delete from mybatis where name=#{name}
+    </delete>
+    <update id="updateUser" parameterType="com.lix.domain.User">
+        update mybatis set description=#{description} where name=#{name}
+    </update>
+    <select id="findAll" resultType="user">
+        select *from mybatis
+    </select>
+    <select id="findUserBy" parameterType="userVo" resultMap="userResultMap">
+        select name,description des from mybatis
+        <where>
+         <include refid="user_query"></include>
+        </where>
+    </select>
+    <sql id="user_query">
+        <if test="s!=null">
+            <if test="s.name!=null and s.name !=''">
+                and name like '%${s.name}%'
+            </if>
+            <if test="s.description!=null and s.description !=''">
+                and description like '%${s.description}%'
+            </if>
+        </if>
+        <if test="ids!=null and ids.size()!=0">
+            <foreach collection="ids" item="id" open="and (" close=")" separator="or">
+                id=#{id}
+            </foreach>
+        </if>
+    </sql>
+
+</mapper>
