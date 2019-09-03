@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lix.mapper.YearreportalterstocksMapper">
+  <resultMap id="BaseResultMap" type="com.lix.domain.Yearreportalterstocks">
+    <result column="ancheid" jdbcType="VARCHAR" property="ancheid" />
+    <result column="altdate" jdbcType="VARCHAR" property="altdate" />
+    <result column="inv" jdbcType="VARCHAR" property="inv" />
+    <result column="transamaft" jdbcType="VARCHAR" property="transamaft" />
+    <result column="transampr" jdbcType="VARCHAR" property="transampr" />
+    <result column="target" jdbcType="VARCHAR" property="target" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    ancheid, altdate, inv, transamaft, transampr, target
+  </sql>
+  <select id="selectByExample" parameterType="com.lix.domain.YearreportalterstocksExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from yearreportalterstocks
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <delete id="deleteByExample" parameterType="com.lix.domain.YearreportalterstocksExample">
+    delete from yearreportalterstocks
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.lix.domain.Yearreportalterstocks">
+    insert into yearreportalterstocks (ancheid, altdate, inv, 
+      transamaft, transampr, target
+      )
+    values (#{ancheid,jdbcType=VARCHAR}, #{altdate,jdbcType=VARCHAR}, #{inv,jdbcType=VARCHAR}, 
+      #{transamaft,jdbcType=VARCHAR}, #{transampr,jdbcType=VARCHAR}, #{target,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.lix.domain.Yearreportalterstocks">
+    insert into yearreportalterstocks
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="ancheid != null">
+        ancheid,
+      </if>
+      <if test="altdate != null">
+        altdate,
+      </if>
+      <if test="inv != null">
+        inv,
+      </if>
+      <if test="transamaft != null">
+        transamaft,
+      </if>
+      <if test="transampr != null">
+        transampr,
+      </if>
+      <if test="target != null">
+        target,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="ancheid != null">
+        #{ancheid,jdbcType=VARCHAR},
+      </if>
+      <if test="altdate != null">
+        #{altdate,jdbcType=VARCHAR},
+      </if>
+      <if test="inv != null">
+        #{inv,jdbcType=VARCHAR},
+      </if>
+      <if test="transamaft != null">
+        #{transamaft,jdbcType=VARCHAR},
+      </if>
+      <if test="transampr != null">
+        #{transampr,jdbcType=VARCHAR},
+      </if>
+      <if test="target != null">
+        #{target,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.lix.domain.YearreportalterstocksExample" resultType="java.lang.Long">
+    select count(*) from yearreportalterstocks
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update yearreportalterstocks
+    <set>
+      <if test="record.ancheid != null">
+        ancheid = #{record.ancheid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.altdate != null">
+        altdate = #{record.altdate,jdbcType=VARCHAR},
+      </if>
+      <if test="record.inv != null">
+        inv = #{record.inv,jdbcType=VARCHAR},
+      </if>
+      <if test="record.transamaft != null">
+        transamaft = #{record.transamaft,jdbcType=VARCHAR},
+      </if>
+      <if test="record.transampr != null">
+        transampr = #{record.transampr,jdbcType=VARCHAR},
+      </if>
+      <if test="record.target != null">
+        target = #{record.target,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update yearreportalterstocks
+    set ancheid = #{record.ancheid,jdbcType=VARCHAR},
+      altdate = #{record.altdate,jdbcType=VARCHAR},
+      inv = #{record.inv,jdbcType=VARCHAR},
+      transamaft = #{record.transamaft,jdbcType=VARCHAR},
+      transampr = #{record.transampr,jdbcType=VARCHAR},
+      target = #{record.target,jdbcType=VARCHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+</mapper>

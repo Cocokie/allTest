@@ -2,6 +2,7 @@ package com.lix.mapper;
 
 import com.lix.domain.User;
 import com.lix.domain.UserVo;
+import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
 

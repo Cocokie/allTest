@@ -1,0 +1,76 @@
+2019-08-10 14:09:07 下午 [Thread: main][ Class:us.codecraft.webmagic.scheduler.QueueScheduler >> Method: us.codecraft.webmagic.scheduler.DuplicateRemovedScheduler.push(DuplicateRemovedScheduler.java:36) ]
+DEBUG:push to queue https://www.zhujianpt.com/company/0-0-130004-1-1.html
+2019-08-10 14:09:07 下午 [Thread: main][ Class:us.codecraft.webmagic.Spider >> Method: us.codecraft.webmagic.Spider.run(Spider.java:306) ]
+INFO:Spider www.zhujianpt.com started!
+2019-08-10 22:55:34 下午 [Thread: main][ Class:us.codecraft.webmagic.scheduler.QueueScheduler >> Method: us.codecraft.webmagic.scheduler.DuplicateRemovedScheduler.push(DuplicateRemovedScheduler.java:36) ]
+DEBUG:push to queue https://www.zhujianpt.com/company/0-0-130004-1-1.html
+2019-08-10 22:55:34 下午 [Thread: main][ Class:us.codecraft.webmagic.Spider >> Method: us.codecraft.webmagic.Spider.run(Spider.java:306) ]
+INFO:Spider www.zhujianpt.com started!
+2019-08-10 22:55:38 下午 [Thread: pool-1-thread-1][ Class:com.jianzhu.controller.MyPageProcessor >> Method: com.jianzhu.controller.MyPageProcessor.process(MyPageProcessor.java:38) ]
+DEBUG:https://www.zhujianpt.com/company/0-0-130004-1-1.html
+2019-08-10 22:56:06 下午 [Thread: pool-1-thread-1][ Class:us.codecraft.webmagic.scheduler.QueueScheduler >> Method: us.codecraft.webmagic.scheduler.DuplicateRemovedScheduler.push(DuplicateRemovedScheduler.java:36) ]
+DEBUG:push to queue http://jzsc.mohurd.gov.cn/dataservice/query/comp/list
+2019-08-10 22:56:06 下午 [Thread: pool-1-thread-1][ Class:us.codecraft.webmagic.scheduler.QueueScheduler >> Method: us.codecraft.webmagic.scheduler.DuplicateRemovedScheduler.push(DuplicateRemovedScheduler.java:36) ]
+DEBUG:push to queue http://jzsc.mohurd.gov.cn/dataservice/query/comp/list
+2019-08-10 22:56:06 下午 [Thread: pool-1-thread-1][ Class:us.codecraft.webmagic.scheduler.QueueScheduler >> Method: us.codecraft.webmagic.scheduler.DuplicateRemovedScheduler.push(DuplicateRemovedScheduler.java:36) ]
+DEBUG:push to queue http://jzsc.mohurd.gov.cn/dataservice/query/comp/list
+2019-08-10 22:56:06 下午 [Thread: pool-1-thread-1][ Class:us.codecraft.webmagic.scheduler.QueueScheduler >> Method: us.codecraft.webmagic.scheduler.DuplicateRemovedScheduler.push(DuplicateRemovedScheduler.java:36) ]
+DEBUG:push to queue http://jzsc.mohurd.gov.cn/dataservice/query/comp/list
+2019-08-10 22:56:06 下午 [Thread: pool-1-thread-1][ Class:us.codecraft.webmagic.scheduler.QueueScheduler >> Method: us.codecraft.webmagic.scheduler.DuplicateRemovedScheduler.push(DuplicateRemovedScheduler.java:36) ]
+DEBUG:push to queue http://jzsc.mohurd.gov.cn/dataservice/query/comp/list
+2019-08-10 22:56:06 下午 [Thread: pool-1-thread-1][ Class:us.codecraft.webmagic.scheduler.QueueScheduler >> Method: us.codecraft.webmagic.scheduler.DuplicateRemovedScheduler.push(DuplicateRemovedScheduler.java:36) ]
+DEBUG:push to queue http://jzsc.mohurd.gov.cn/dataservice/query/comp/list
+2019-08-10 22:56:06 下午 [Thread: pool-1-thread-1][ Class:us.codecraft.webmagic.scheduler.QueueScheduler >> Method: us.codecraft.webmagic.scheduler.DuplicateRemovedScheduler.push(DuplicateRemovedScheduler.java:36) ]
+DEBUG:push to queue http://jzsc.mohurd.gov.cn/dataservice/query/comp/list
+2019-08-10 22:56:06 下午 [Thread: pool-1-thread-1][ Class:us.codecraft.webmagic.scheduler.QueueScheduler >> Method: us.codecraft.webmagic.scheduler.DuplicateRemovedScheduler.push(DuplicateRemovedScheduler.java:36) ]
+DEBUG:push to queue http://jzsc.mohurd.gov.cn/dataservice/query/comp/list
+2019-08-10 22:56:06 下午 [Thread: pool-1-thread-1][ Class:us.codecraft.webmagic.scheduler.QueueScheduler >> Method: us.codecraft.webmagic.scheduler.DuplicateRemovedScheduler.push(DuplicateRemovedScheduler.java:36) ]
+DEBUG:push to queue http://jzsc.mohurd.gov.cn/dataservice/query/comp/list
+2019-08-10 22:56:06 下午 [Thread: pool-1-thread-1][ Class:us.codecraft.webmagic.scheduler.QueueScheduler >> Method: us.codecraft.webmagic.scheduler.DuplicateRemovedScheduler.push(DuplicateRemovedScheduler.java:36) ]
+DEBUG:push to queue http://jzsc.mohurd.gov.cn/dataservice/query/comp/list
+2019-08-10 22:56:06 下午 [Thread: pool-1-thread-1][ Class:us.codecraft.webmagic.scheduler.QueueScheduler >> Method: us.codecraft.webmagic.scheduler.DuplicateRemovedScheduler.push(DuplicateRemovedScheduler.java:36) ]
+DEBUG:push to queue http://jzsc.mohurd.gov.cn/dataservice/query/comp/list
+2019-08-10 22:56:06 下午 [Thread: pool-1-thread-1][ Class:us.codecraft.webmagic.scheduler.QueueScheduler >> Method: us.codecraft.webmagic.scheduler.DuplicateRemovedScheduler.push(DuplicateRemovedScheduler.java:36) ]
+DEBUG:push to queue http://jzsc.mohurd.gov.cn/dataservice/query/comp/list
+2019-08-10 22:56:06 下午 [Thread: pool-1-thread-1][ Class:us.codecraft.webmagic.scheduler.QueueScheduler >> Method: us.codecraft.webmagic.scheduler.DuplicateRemovedScheduler.push(DuplicateRemovedScheduler.java:36) ]
+DEBUG:push to queue http://jzsc.mohurd.gov.cn/dataservice/query/comp/list
+2019-08-10 22:56:06 下午 [Thread: pool-1-thread-1][ Class:us.codecraft.webmagic.scheduler.QueueScheduler >> Method: us.codecraft.webmagic.scheduler.DuplicateRemovedScheduler.push(DuplicateRemovedScheduler.java:36) ]
+DEBUG:push to queue http://jzsc.mohurd.gov.cn/dataservice/query/comp/list
+2019-08-10 22:56:06 下午 [Thread: pool-1-thread-1][ Class:us.codecraft.webmagic.scheduler.QueueScheduler >> Method: us.codecraft.webmagic.scheduler.DuplicateRemovedScheduler.push(DuplicateRemovedScheduler.java:36) ]
+DEBUG:push to queue http://jzsc.mohurd.gov.cn/dataservice/query/comp/list
+2019-08-10 22:56:06 下午 [Thread: pool-1-thread-1][ Class:us.codecraft.webmagic.scheduler.QueueScheduler >> Method: us.codecraft.webmagic.scheduler.DuplicateRemovedScheduler.push(DuplicateRemovedScheduler.java:36) ]
+DEBUG:push to queue http://jzsc.mohurd.gov.cn/dataservice/query/comp/list
+2019-08-10 22:56:06 下午 [Thread: pool-1-thread-1][ Class:us.codecraft.webmagic.scheduler.QueueScheduler >> Method: us.codecraft.webmagic.scheduler.DuplicateRemovedScheduler.push(DuplicateRemovedScheduler.java:36) ]
+DEBUG:push to queue http://jzsc.mohurd.gov.cn/dataservice/query/comp/list
+2019-08-10 22:56:06 下午 [Thread: pool-1-thread-1][ Class:us.codecraft.webmagic.scheduler.QueueScheduler >> Method: us.codecraft.webmagic.scheduler.DuplicateRemovedScheduler.push(DuplicateRemovedScheduler.java:36) ]
+DEBUG:push to queue http://jzsc.mohurd.gov.cn/dataservice/query/comp/list
+2019-08-10 22:56:06 下午 [Thread: pool-1-thread-1][ Class:us.codecraft.webmagic.scheduler.QueueScheduler >> Method: us.codecraft.webmagic.scheduler.DuplicateRemovedScheduler.push(DuplicateRemovedScheduler.java:36) ]
+DEBUG:push to queue http://jzsc.mohurd.gov.cn/dataservice/query/comp/list
+2019-08-10 22:56:06 下午 [Thread: pool-1-thread-1][ Class:us.codecraft.webmagic.scheduler.QueueScheduler >> Method: us.codecraft.webmagic.scheduler.DuplicateRemovedScheduler.push(DuplicateRemovedScheduler.java:36) ]
+DEBUG:push to queue http://jzsc.mohurd.gov.cn/dataservice/query/comp/list
+2019-08-10 22:56:06 下午 [Thread: pool-1-thread-1][ Class:us.codecraft.webmagic.scheduler.QueueScheduler >> Method: us.codecraft.webmagic.scheduler.DuplicateRemovedScheduler.push(DuplicateRemovedScheduler.java:36) ]
+DEBUG:push to queue https://www.zhujianpt.com/company/0-0-130004-1-2.html
+2019-08-10 22:56:13 下午 [Thread: main][ Class:us.codecraft.webmagic.scheduler.QueueScheduler >> Method: us.codecraft.webmagic.scheduler.DuplicateRemovedScheduler.push(DuplicateRemovedScheduler.java:36) ]
+DEBUG:push to queue https://www.zhujianpt.com/company/0-0-130004-1-1.html
+2019-08-10 22:56:13 下午 [Thread: main][ Class:us.codecraft.webmagic.Spider >> Method: us.codecraft.webmagic.Spider.run(Spider.java:306) ]
+INFO:Spider www.zhujianpt.com started!
+2019-08-10 22:56:16 下午 [Thread: pool-1-thread-1][ Class:com.jianzhu.controller.MyPageProcessor >> Method: com.jianzhu.controller.MyPageProcessor.process(MyPageProcessor.java:38) ]
+DEBUG:https://www.zhujianpt.com/company/0-0-130004-1-1.html
+2019-08-10 22:58:20 下午 [Thread: main][ Class:us.codecraft.webmagic.scheduler.QueueScheduler >> Method: us.codecraft.webmagic.scheduler.DuplicateRemovedScheduler.push(DuplicateRemovedScheduler.java:36) ]
+DEBUG:push to queue https://www.zhujianpt.com/company/0-0-130004-1-1.html
+2019-08-10 22:58:20 下午 [Thread: main][ Class:us.codecraft.webmagic.Spider >> Method: us.codecraft.webmagic.Spider.run(Spider.java:306) ]
+INFO:Spider www.zhujianpt.com started!
+2019-08-10 22:58:24 下午 [Thread: pool-1-thread-1][ Class:com.jianzhu.controller.MyPageProcessor >> Method: com.jianzhu.controller.MyPageProcessor.process(MyPageProcessor.java:38) ]
+DEBUG:https://www.zhujianpt.com/company/0-0-130004-1-1.html
+2019-08-10 23:01:30 下午 [Thread: main][ Class:us.codecraft.webmagic.scheduler.QueueScheduler >> Method: us.codecraft.webmagic.scheduler.DuplicateRemovedScheduler.push(DuplicateRemovedScheduler.java:36) ]
+DEBUG:push to queue https://www.zhujianpt.com/company/0-0-130004-1-1.html
+2019-08-10 23:01:30 下午 [Thread: main][ Class:us.codecraft.webmagic.Spider >> Method: us.codecraft.webmagic.Spider.run(Spider.java:306) ]
+INFO:Spider www.zhujianpt.com started!
+2019-08-10 23:01:35 下午 [Thread: pool-1-thread-1][ Class:com.jianzhu.controller.MyPageProcessor >> Method: com.jianzhu.controller.MyPageProcessor.process(MyPageProcessor.java:38) ]
+DEBUG:https://www.zhujianpt.com/company/0-0-130004-1-1.html
+2019-08-10 23:02:20 下午 [Thread: main][ Class:us.codecraft.webmagic.scheduler.QueueScheduler >> Method: us.codecraft.webmagic.scheduler.DuplicateRemovedScheduler.push(DuplicateRemovedScheduler.java:36) ]
+DEBUG:push to queue https://www.zhujianpt.com/company/0-0-130004-1-1.html
+2019-08-10 23:02:20 下午 [Thread: main][ Class:us.codecraft.webmagic.Spider >> Method: us.codecraft.webmagic.Spider.run(Spider.java:306) ]
+INFO:Spider www.zhujianpt.com started!
+2019-08-10 23:02:24 下午 [Thread: pool-1-thread-1][ Class:com.jianzhu.controller.MyPageProcessor >> Method: com.jianzhu.controller.MyPageProcessor.process(MyPageProcessor.java:38) ]
+DEBUG:https://www.zhujianpt.com/company/0-0-130004-1-1.html

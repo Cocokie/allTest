@@ -11,7 +11,7 @@ import java.nio.charset.Charset;
 import java.util.Enumeration;
 import java.util.Properties;
 
-public class Normal {
+public class  Normal {
 
     public static void main(String[] args) {
         File f = new File("nomol/src/main/resources/x.properties");

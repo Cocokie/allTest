@@ -3,7 +3,6 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
     <groupId>com.lix</groupId>
     <artifactId>allMyT</artifactId>
     <packaging>pom</packaging>
@@ -18,6 +17,15 @@
         <module>mongodbT</module>
         <module>log4jT</module>
         <module>logbackT</module>
+        <module>baseExtends</module>
+        <module>mainParamsT</module>
+        <module>classLoadT</module>
+        <module>dateT</module>
+        <module>webmagicT</module>
+        <module>customizes</module>
+        <module>generatereverse</module>
+        <module>neo4jT</module>
+        <module>httpTest</module>
     </modules>
 <dependencies>
 

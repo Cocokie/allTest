@@ -33,6 +33,7 @@ public class Consumer2 {
         // 获取消息
         while (true) {
             QueueingConsumer.Delivery delivery = consumer.nextDelivery();
+
             String message = new String(delivery.getBody());
             System.out.println(" [Recv2] Received '" + message + "'");
             Thread.sleep(10);

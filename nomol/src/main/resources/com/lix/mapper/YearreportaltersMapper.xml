@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lix.mapper.YearreportaltersMapper">
+  <resultMap id="BaseResultMap" type="com.lix.domain.Yearreportalters">
+    <result column="ancheid" jdbcType="VARCHAR" property="ancheid" />
+    <result column="altitem" jdbcType="VARCHAR" property="altitem" />
+    <result column="altaf" jdbcType="VARCHAR" property="altaf" />
+    <result column="altbe" jdbcType="VARCHAR" property="altbe" />
+    <result column="altdate" jdbcType="VARCHAR" property="altdate" />
+    <result column="target" jdbcType="VARCHAR" property="target" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    ancheid, altitem, altaf, altbe, altdate, target
+  </sql>
+  <select id="selectByExample" parameterType="com.lix.domain.YearreportaltersExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from yearreportalters
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <delete id="deleteByExample" parameterType="com.lix.domain.YearreportaltersExample">
+    delete from yearreportalters
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.lix.domain.Yearreportalters">
+    insert into yearreportalters (ancheid, altitem, altaf, 
+      altbe, altdate, target
+      )
+    values (#{ancheid,jdbcType=VARCHAR}, #{altitem,jdbcType=VARCHAR}, #{altaf,jdbcType=VARCHAR}, 
+      #{altbe,jdbcType=VARCHAR}, #{altdate,jdbcType=VARCHAR}, #{target,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.lix.domain.Yearreportalters">
+    insert into yearreportalters
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="ancheid != null">
+        ancheid,
+      </if>
+      <if test="altitem != null">
+        altitem,
+      </if>
+      <if test="altaf != null">
+        altaf,
+      </if>
+      <if test="altbe != null">
+        altbe,
+      </if>
+      <if test="altdate != null">
+        altdate,
+      </if>
+      <if test="target != null">
+        target,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="ancheid != null">
+        #{ancheid,jdbcType=VARCHAR},
+      </if>
+      <if test="altitem != null">
+        #{altitem,jdbcType=VARCHAR},
+      </if>
+      <if test="altaf != null">
+        #{altaf,jdbcType=VARCHAR},
+      </if>
+      <if test="altbe != null">
+        #{altbe,jdbcType=VARCHAR},
+      </if>
+      <if test="altdate != null">
+        #{altdate,jdbcType=VARCHAR},
+      </if>
+      <if test="target != null">
+        #{target,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.lix.domain.YearreportaltersExample" resultType="java.lang.Long">
+    select count(*) from yearreportalters
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update yearreportalters
+    <set>
+      <if test="record.ancheid != null">
+        ancheid = #{record.ancheid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.altitem != null">
+        altitem = #{record.altitem,jdbcType=VARCHAR},
+      </if>
+      <if test="record.altaf != null">
+        altaf = #{record.altaf,jdbcType=VARCHAR},
+      </if>
+      <if test="record.altbe != null">
+        altbe = #{record.altbe,jdbcType=VARCHAR},
+      </if>
+      <if test="record.altdate != null">
+        altdate = #{record.altdate,jdbcType=VARCHAR},
+      </if>
+      <if test="record.target != null">
+        target = #{record.target,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update yearreportalters
+    set ancheid = #{record.ancheid,jdbcType=VARCHAR},
+      altitem = #{record.altitem,jdbcType=VARCHAR},
+      altaf = #{record.altaf,jdbcType=VARCHAR},
+      altbe = #{record.altbe,jdbcType=VARCHAR},
+      altdate = #{record.altdate,jdbcType=VARCHAR},
+      target = #{record.target,jdbcType=VARCHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+</mapper>

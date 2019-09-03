@@ -1,5 +1,6 @@
 package com.lix;
 
+import com.sun.corba.se.impl.orbutil.ObjectWriter;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -33,9 +34,8 @@ public class OrgJson {
      */
     public static void main(String[] args) {
         Person p = new Person();
-        p.setAge("18");
-        p.setName("八稚女");
-        p.setSex("female");
+       /* p.setAge("18");
+        p.setName("八稚女");*/
         String text = "{'id':1,'name':'头上佛','stus':[{'id':101,'name':'刘一手','age':16}]}";
         String per = "{'name':'头上佛','age':'6','sex':'2'}";
         String arra = "[{'sty':{'id':101,'name':'刘一手','age':16}},\"777\"]";

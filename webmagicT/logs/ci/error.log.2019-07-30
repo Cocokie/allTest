@@ -1,0 +1,96 @@
+2019-07-30 09:43:11 上午 [Thread: pool-1-thread-1][ Class:us.codecraft.webmagic.Spider >> Method: us.codecraft.webmagic.Spider$1.run(Spider.java:324) ]
+ERROR:process request Request{url='http://emweb.securities.eastmoney.com/PC_HKF10/CompanyProfile/PageAjax?code=04332', method='null', extras={code=04332}, priority=0, headers={}, cookies={}} error
+java.lang.NullPointerException
+	at com.lix.controller.MyPageProcessor.process(MyPageProcessor.java:88)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2019-07-30 09:43:11 上午 [Thread: pool-1-thread-1][ Class:us.codecraft.webmagic.Spider >> Method: us.codecraft.webmagic.Spider$1.run(Spider.java:324) ]
+ERROR:process request Request{url='http://emweb.securities.eastmoney.com/PC_HKF10/CompanyProfile/PageAjax?code=04333', method='null', extras={code=04333}, priority=0, headers={}, cookies={}} error
+java.lang.NullPointerException
+	at com.lix.controller.MyPageProcessor.process(MyPageProcessor.java:88)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2019-07-30 09:43:11 上午 [Thread: pool-1-thread-1][ Class:us.codecraft.webmagic.Spider >> Method: us.codecraft.webmagic.Spider$1.run(Spider.java:324) ]
+ERROR:process request Request{url='http://emweb.securities.eastmoney.com/PC_HKF10/CompanyProfile/PageAjax?code=04335', method='null', extras={code=04335}, priority=0, headers={}, cookies={}} error
+java.lang.NullPointerException
+	at com.lix.controller.MyPageProcessor.process(MyPageProcessor.java:88)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2019-07-30 09:43:11 上午 [Thread: pool-1-thread-1][ Class:us.codecraft.webmagic.Spider >> Method: us.codecraft.webmagic.Spider$1.run(Spider.java:324) ]
+ERROR:process request Request{url='http://emweb.securities.eastmoney.com/PC_HKF10/CompanyProfile/PageAjax?code=04336', method='null', extras={code=04336}, priority=0, headers={}, cookies={}} error
+java.lang.NullPointerException
+	at com.lix.controller.MyPageProcessor.process(MyPageProcessor.java:88)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2019-07-30 09:43:12 上午 [Thread: pool-1-thread-1][ Class:us.codecraft.webmagic.Spider >> Method: us.codecraft.webmagic.Spider$1.run(Spider.java:324) ]
+ERROR:process request Request{url='http://emweb.securities.eastmoney.com/PC_HKF10/CompanyProfile/PageAjax?code=04337', method='null', extras={code=04337}, priority=0, headers={}, cookies={}} error
+java.lang.NullPointerException
+	at com.lix.controller.MyPageProcessor.process(MyPageProcessor.java:88)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2019-07-30 09:43:12 上午 [Thread: pool-1-thread-1][ Class:us.codecraft.webmagic.Spider >> Method: us.codecraft.webmagic.Spider$1.run(Spider.java:324) ]
+ERROR:process request Request{url='http://emweb.securities.eastmoney.com/PC_HKF10/CompanyProfile/PageAjax?code=04338', method='null', extras={code=04338}, priority=0, headers={}, cookies={}} error
+java.lang.NullPointerException
+	at com.lix.controller.MyPageProcessor.process(MyPageProcessor.java:88)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2019-07-30 09:45:26 上午 [Thread: pool-1-thread-1][ Class:us.codecraft.webmagic.Spider >> Method: us.codecraft.webmagic.Spider$1.run(Spider.java:324) ]
+ERROR:process request Request{url='http://emweb.securities.eastmoney.com/PC_HKF10/CompanyProfile/PageAjax?code=04332', method='null', extras=null, priority=0, headers={}, cookies={}} error
+java.lang.NullPointerException
+	at com.lix.controller.MyPageProcessor.process(MyPageProcessor.java:88)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2019-07-30 09:45:50 上午 [Thread: pool-1-thread-1][ Class:us.codecraft.webmagic.Spider >> Method: us.codecraft.webmagic.Spider$1.run(Spider.java:324) ]
+ERROR:process request Request{url='http://emweb.securities.eastmoney.com/PC_HKF10/CompanyProfile/PageAjax?code=04332', method='null', extras=null, priority=0, headers={}, cookies={}} error
+java.lang.NullPointerException
+	at com.lix.controller.MyPageProcessor.process(MyPageProcessor.java:88)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)

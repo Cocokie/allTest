@@ -3,20 +3,26 @@ package com.lix;
 import java.io.*;
 import java.net.URL;
 import java.net.URLClassLoader;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.Properties;
 import java.util.jar.JarOutputStream;
 
 public class LoadIng {
     public static void main(String[] args) throws Exception {
+        final int a = 5;
+        int b = 5;
+        System.out.println(a == b);
         String userPath = System.getProperty("user.dir");
         String path = LoadIng.class.getProtectionDomain().getCodeSource().getLocation().getPath();
         System.out.println(new File("").getAbsolutePath());
         FileInputStream in = new FileInputStream("loadFile/src/main/resources/x.properties");
         String classLoaderPath = LoadIng.class.getClassLoader().toString();
 
-        System.out.println("userPath: "+userPath);
-        System.out.println("path: "+path);
-        System.out.println("classLoaderPath: "+classLoaderPath);
+        System.out.println("userPath: " + userPath);
+        System.out.println("path: " + path);
+        System.out.println("classLoaderPath: " + classLoaderPath);
 
         System.out.println(System.getProperty("user.dir"));
         Properties p = new Properties();
@@ -30,7 +36,7 @@ public class LoadIng {
         p.load(resourceAsStream2);
         System.out.println(p.getProperty("name"));
         System.out.println(resourceAsStream2);
-        p.put("name","dsds");
+        p.put("name", "dsds");
       /*  JarOutputStream jo = new JarOutputStream(new FileOutputStream("x.properties"));
 
         p.store(jo,"xixi");
@@ -44,8 +50,8 @@ public class LoadIng {
         pd.load(resourceAsStream);
         OutputStream o = new FileOutputStream("x.properties");
         String name = pd.getProperty("name");
-        pd.put("name","caoyaofang");
-        pd.store(o,"777");
+        pd.put("name", "caoyaofang");
+        pd.store(o, "777");
         //od.close();
     }
 }

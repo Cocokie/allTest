@@ -11,9 +11,6 @@
 
     <artifactId>JsonT</artifactId>
     <packaging>pom</packaging>
-    <modules>
-        <module>springmvc</module>
-    </modules>
     <dependencies>
     <!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
     <dependency>

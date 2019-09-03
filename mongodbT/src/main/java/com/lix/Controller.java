@@ -23,7 +23,7 @@ public class Controller {
         int i = 1;
         //int size = companyXls.size();
         //ReadCompany r = new ReadCompany(new FileInputStream("F:/央企数据.xlsx"));
-        for (String name : Arrays.asList("深圳市海王星辰健康药房连锁有限公司")) {
+        for (String name : Arrays.asList("中国投资有限责任公司")) {
             System.out.println("当前第" + (i++) + "/" + 1 + "   " + name);
             JSONObject document = c.mongodb().getDocument(name);
             if (document == null) {
@@ -59,7 +59,8 @@ public class Controller {
     }
 
     private static void getFenzhi(Controller c, int i, String name, JSONObject document) {
-        JSONArray branches = document.getJSONArray("branches");
+        JSONArray branches = document.getJSONObject("BusinessData").getJSONArray("Branches");
+
         if (branches != null && branches.size() == 0) {
             i++;
             return ;
@@ -74,7 +75,7 @@ public class Controller {
         i++;
     }
     private static void getGD(Controller c, int i, String name, JSONObject document) {
-        JSONArray branches = document.getJSONArray("shareholders");
+        JSONArray branches = document.getJSONObject("BusinessData").getJSONArray("Holder");
         if (branches != null && branches.size() == 0) {
             i++;
             return ;
@@ -82,7 +83,7 @@ public class Controller {
 
         for (Object ob : branches) {
             JSONObject sd = (JSONObject) ob;
-            String bra_name = sd.getString("shareholder_name");
+            String bra_name = sd.getString("company_name");
             c.mysql().insertGD(name, bra_name);
             //r.writeXlsx("分支机构",name,bra_name);
         }

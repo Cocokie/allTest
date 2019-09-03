@@ -46,6 +46,7 @@ public class MysqlUtils {
     public void getTest(){
         try {
             Connection connection = DriverManager.getConnection(p.getProperty("db.url"), p.getProperty("db.username"), p.getProperty("db.password"));
+            System.out.println(connection);
             sta = connection.createStatement();
         } catch (SQLException e) {
             e.printStackTrace();

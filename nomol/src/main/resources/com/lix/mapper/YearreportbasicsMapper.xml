@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lix.mapper.YearreportbasicsMapper">
+  <resultMap id="BaseResultMap" type="com.lix.domain.Yearreportbasics">
+    <result column="ancheid" jdbcType="VARCHAR" property="ancheid" />
+    <result column="addr" jdbcType="VARCHAR" property="addr" />
+    <result column="anchedate" jdbcType="VARCHAR" property="anchedate" />
+    <result column="ancheyear" jdbcType="VARCHAR" property="ancheyear" />
+    <result column="busst" jdbcType="VARCHAR" property="busst" />
+    <result column="creditno" jdbcType="VARCHAR" property="creditno" />
+    <result column="email" jdbcType="VARCHAR" property="email" />
+    <result column="entname" jdbcType="VARCHAR" property="entname" />
+    <result column="postalcode" jdbcType="VARCHAR" property="postalcode" />
+    <result column="regno" jdbcType="VARCHAR" property="regno" />
+    <result column="tel" jdbcType="VARCHAR" property="tel" />
+    <result column="target" jdbcType="VARCHAR" property="target" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    ancheid, addr, anchedate, ancheyear, busst, creditno, email, entname, postalcode, 
+    regno, tel, target
+  </sql>
+  <select id="selectByExample" parameterType="com.lix.domain.YearreportbasicsExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from yearreportbasics
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <delete id="deleteByExample" parameterType="com.lix.domain.YearreportbasicsExample">
+    delete from yearreportbasics
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.lix.domain.Yearreportbasics">
+    insert into yearreportbasics (ancheid, addr, anchedate, 
+      ancheyear, busst, creditno, 
+      email, entname, postalcode, 
+      regno, tel, target)
+    values (#{ancheid,jdbcType=VARCHAR}, #{addr,jdbcType=VARCHAR}, #{anchedate,jdbcType=VARCHAR}, 
+      #{ancheyear,jdbcType=VARCHAR}, #{busst,jdbcType=VARCHAR}, #{creditno,jdbcType=VARCHAR}, 
+      #{email,jdbcType=VARCHAR}, #{entname,jdbcType=VARCHAR}, #{postalcode,jdbcType=VARCHAR}, 
+      #{regno,jdbcType=VARCHAR}, #{tel,jdbcType=VARCHAR}, #{target,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.lix.domain.Yearreportbasics">
+    insert into yearreportbasics
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="ancheid != null">
+        ancheid,
+      </if>
+      <if test="addr != null">
+        addr,
+      </if>
+      <if test="anchedate != null">
+        anchedate,
+      </if>
+      <if test="ancheyear != null">
+        ancheyear,
+      </if>
+      <if test="busst != null">
+        busst,
+      </if>
+      <if test="creditno != null">
+        creditno,
+      </if>
+      <if test="email != null">
+        email,
+      </if>
+      <if test="entname != null">
+        entname,
+      </if>
+      <if test="postalcode != null">
+        postalcode,
+      </if>
+      <if test="regno != null">
+        regno,
+      </if>
+      <if test="tel != null">
+        tel,
+      </if>
+      <if test="target != null">
+        target,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="ancheid != null">
+        #{ancheid,jdbcType=VARCHAR},
+      </if>
+      <if test="addr != null">
+        #{addr,jdbcType=VARCHAR},
+      </if>
+      <if test="anchedate != null">
+        #{anchedate,jdbcType=VARCHAR},
+      </if>
+      <if test="ancheyear != null">
+        #{ancheyear,jdbcType=VARCHAR},
+      </if>
+      <if test="busst != null">
+        #{busst,jdbcType=VARCHAR},
+      </if>
+      <if test="creditno != null">
+        #{creditno,jdbcType=VARCHAR},
+      </if>
+      <if test="email != null">
+        #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="entname != null">
+        #{entname,jdbcType=VARCHAR},
+      </if>
+      <if test="postalcode != null">
+        #{postalcode,jdbcType=VARCHAR},
+      </if>
+      <if test="regno != null">
+        #{regno,jdbcType=VARCHAR},
+      </if>
+      <if test="tel != null">
+        #{tel,jdbcType=VARCHAR},
+      </if>
+      <if test="target != null">
+        #{target,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.lix.domain.YearreportbasicsExample" resultType="java.lang.Long">
+    select count(*) from yearreportbasics
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update yearreportbasics
+    <set>
+      <if test="record.ancheid != null">
+        ancheid = #{record.ancheid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.addr != null">
+        addr = #{record.addr,jdbcType=VARCHAR},
+      </if>
+      <if test="record.anchedate != null">
+        anchedate = #{record.anchedate,jdbcType=VARCHAR},
+      </if>
+      <if test="record.ancheyear != null">
+        ancheyear = #{record.ancheyear,jdbcType=VARCHAR},
+      </if>
+      <if test="record.busst != null">
+        busst = #{record.busst,jdbcType=VARCHAR},
+      </if>
+      <if test="record.creditno != null">
+        creditno = #{record.creditno,jdbcType=VARCHAR},
+      </if>
+      <if test="record.email != null">
+        email = #{record.email,jdbcType=VARCHAR},
+      </if>
+      <if test="record.entname != null">
+        entname = #{record.entname,jdbcType=VARCHAR},
+      </if>
+      <if test="record.postalcode != null">
+        postalcode = #{record.postalcode,jdbcType=VARCHAR},
+      </if>
+      <if test="record.regno != null">
+        regno = #{record.regno,jdbcType=VARCHAR},
+      </if>
+      <if test="record.tel != null">
+        tel = #{record.tel,jdbcType=VARCHAR},
+      </if>
+      <if test="record.target != null">
+        target = #{record.target,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update yearreportbasics
+    set ancheid = #{record.ancheid,jdbcType=VARCHAR},
+      addr = #{record.addr,jdbcType=VARCHAR},
+      anchedate = #{record.anchedate,jdbcType=VARCHAR},
+      ancheyear = #{record.ancheyear,jdbcType=VARCHAR},
+      busst = #{record.busst,jdbcType=VARCHAR},
+      creditno = #{record.creditno,jdbcType=VARCHAR},
+      email = #{record.email,jdbcType=VARCHAR},
+      entname = #{record.entname,jdbcType=VARCHAR},
+      postalcode = #{record.postalcode,jdbcType=VARCHAR},
+      regno = #{record.regno,jdbcType=VARCHAR},
+      tel = #{record.tel,jdbcType=VARCHAR},
+      target = #{record.target,jdbcType=VARCHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+</mapper>

@@ -16,11 +16,9 @@ public class Producer {
             chl.queueDeclare(QUEUE_NAME,false,false,false,null);
             String message = "Hello World!";
             for (int i = 0; i < 100; i++) {
-
                  message = "" + i;
                 chl.basicPublish("",QUEUE_NAME,null,message.getBytes());
                 System.out.println(" [x] Sent '" + message + "'");
-
                 //Thread.sleep(i * 10);
             }
             chl.close();

@@ -1,0 +1,96 @@
+2019-08-09 10:28:32 上午 [Thread: pool-1-thread-1][ Class:us.codecraft.webmagic.Spider >> Method: us.codecraft.webmagic.Spider$1.run(Spider.java:324) ]
+ERROR:process request Request{url='http://jzsc.mohurd.gov.cn/dataservice/query/comp/list', method='POST', extras={category=null, target=贵州省毕节市鑫盛建筑有限公司}, priority=0, headers={}, cookies={}} error
+java.lang.NullPointerException
+	at com.jianzhu.controller.MyPageProcessor.process(MyPageProcessor.java:88)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2019-08-09 10:29:04 上午 [Thread: pool-1-thread-1][ Class:us.codecraft.webmagic.Spider >> Method: us.codecraft.webmagic.Spider$1.run(Spider.java:324) ]
+ERROR:process request Request{url='http://jzsc.mohurd.gov.cn/dataservice/query/comp/list', method='POST', extras={category=公路工程施工总承包, target=贵州省毕节市鑫盛建筑有限公司}, priority=0, headers={}, cookies={}} error
+java.lang.NullPointerException
+	at com.jianzhu.controller.MyPageProcessor.process(MyPageProcessor.java:88)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2019-08-09 10:34:57 上午 [Thread: pool-1-thread-1][ Class:us.codecraft.webmagic.Spider >> Method: us.codecraft.webmagic.Spider$1.run(Spider.java:324) ]
+ERROR:process request Request{url='https://www.zhujianpt.com/company.html', method='null', extras=null, priority=0, headers={}, cookies={}} error
+java.lang.NullPointerException
+	at com.jianzhu.controller.MyPageProcessor.process(MyPageProcessor.java:32)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2019-08-09 11:03:12 上午 [Thread: pool-1-thread-1][ Class:us.codecraft.webmagic.Spider >> Method: us.codecraft.webmagic.Spider$1.run(Spider.java:324) ]
+ERROR:process request Request{url='http://jzsc.mohurd.gov.cn/dataservice/query/comp/list', method='POST', extras={category=建筑工程施工总承包, target=贵州省毕节市鑫盛建筑有限公司}, priority=0, headers={}, cookies={}} error
+java.lang.NullPointerException
+	at com.jianzhu.controller.MyPageProcessor.process(MyPageProcessor.java:95)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2019-08-09 11:07:47 上午 [Thread: pool-1-thread-1][ Class:us.codecraft.webmagic.Spider >> Method: us.codecraft.webmagic.Spider$1.run(Spider.java:324) ]
+ERROR:process request Request{url='http://jzsc.mohurd.gov.cn/dataservice/query/comp/list', method='POST', extras={category=建筑工程施工总承包, target=江苏百茂建设集团有限公司}, priority=0, headers={}, cookies={}} error
+java.lang.NullPointerException
+	at com.jianzhu.controller.MyPageProcessor.process(MyPageProcessor.java:95)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2019-08-09 11:09:36 上午 [Thread: pool-1-thread-1][ Class:us.codecraft.webmagic.Spider >> Method: us.codecraft.webmagic.Spider$1.run(Spider.java:324) ]
+ERROR:process request Request{url='http://jzsc.mohurd.gov.cn/dataservice/query/comp/list', method='POST', extras={category=建筑工程施工总承包, target=中国能源建设集团黑龙江省火电第三工程有限公司}, priority=0, headers={}, cookies={}} error
+java.lang.NullPointerException
+	at com.jianzhu.controller.MyPageProcessor.process(MyPageProcessor.java:95)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2019-08-09 11:11:41 上午 [Thread: pool-1-thread-1][ Class:us.codecraft.webmagic.Spider >> Method: us.codecraft.webmagic.Spider$1.run(Spider.java:324) ]
+ERROR:process request Request{url='http://jzsc.mohurd.gov.cn/dataservice/query/comp/list', method='POST', extras={category=建筑工程施工总承包, target=南京倍特园林建设有限公司}, priority=0, headers={}, cookies={}} error
+java.lang.NullPointerException
+	at com.jianzhu.controller.MyPageProcessor.process(MyPageProcessor.java:95)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2019-08-09 11:31:07 上午 [Thread: pool-1-thread-1][ Class:us.codecraft.webmagic.Spider >> Method: us.codecraft.webmagic.Spider$1.run(Spider.java:324) ]
+ERROR:process request Request{url='http://jzsc.mohurd.gov.cn/dataservice/query/comp/list', method='POST', extras={category=建筑工程施工总承包, target=贵州省毕节市鑫盛建筑有限公司}, priority=0, headers={}, cookies={}} error
+java.lang.NullPointerException
+	at com.jianzhu.controller.MyPageProcessor.process(MyPageProcessor.java:95)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)

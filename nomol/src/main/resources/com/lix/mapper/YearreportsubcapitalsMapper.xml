@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lix.mapper.YearreportsubcapitalsMapper">
+  <resultMap id="BaseResultMap" type="com.lix.domain.Yearreportsubcapitals">
+    <result column="ancheid" jdbcType="VARCHAR" property="ancheid" />
+    <result column="condate" jdbcType="VARCHAR" property="condate" />
+    <result column="conform" jdbcType="VARCHAR" property="conform" />
+    <result column="currency" jdbcType="VARCHAR" property="currency" />
+    <result column="inv" jdbcType="VARCHAR" property="inv" />
+    <result column="lisubconam" jdbcType="VARCHAR" property="lisubconam" />
+    <result column="target" jdbcType="VARCHAR" property="target" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    ancheid, condate, conform, currency, inv, lisubconam, target
+  </sql>
+  <select id="selectByExample" parameterType="com.lix.domain.YearreportsubcapitalsExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from yearreportsubcapitals
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <delete id="deleteByExample" parameterType="com.lix.domain.YearreportsubcapitalsExample">
+    delete from yearreportsubcapitals
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.lix.domain.Yearreportsubcapitals">
+    insert into yearreportsubcapitals (ancheid, condate, conform, 
+      currency, inv, lisubconam, 
+      target)
+    values (#{ancheid,jdbcType=VARCHAR}, #{condate,jdbcType=VARCHAR}, #{conform,jdbcType=VARCHAR}, 
+      #{currency,jdbcType=VARCHAR}, #{inv,jdbcType=VARCHAR}, #{lisubconam,jdbcType=VARCHAR}, 
+      #{target,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.lix.domain.Yearreportsubcapitals">
+    insert into yearreportsubcapitals
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="ancheid != null">
+        ancheid,
+      </if>
+      <if test="condate != null">
+        condate,
+      </if>
+      <if test="conform != null">
+        conform,
+      </if>
+      <if test="currency != null">
+        currency,
+      </if>
+      <if test="inv != null">
+        inv,
+      </if>
+      <if test="lisubconam != null">
+        lisubconam,
+      </if>
+      <if test="target != null">
+        target,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="ancheid != null">
+        #{ancheid,jdbcType=VARCHAR},
+      </if>
+      <if test="condate != null">
+        #{condate,jdbcType=VARCHAR},
+      </if>
+      <if test="conform != null">
+        #{conform,jdbcType=VARCHAR},
+      </if>
+      <if test="currency != null">
+        #{currency,jdbcType=VARCHAR},
+      </if>
+      <if test="inv != null">
+        #{inv,jdbcType=VARCHAR},
+      </if>
+      <if test="lisubconam != null">
+        #{lisubconam,jdbcType=VARCHAR},
+      </if>
+      <if test="target != null">
+        #{target,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.lix.domain.YearreportsubcapitalsExample" resultType="java.lang.Long">
+    select count(*) from yearreportsubcapitals
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update yearreportsubcapitals
+    <set>
+      <if test="record.ancheid != null">
+        ancheid = #{record.ancheid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.condate != null">
+        condate = #{record.condate,jdbcType=VARCHAR},
+      </if>
+      <if test="record.conform != null">
+        conform = #{record.conform,jdbcType=VARCHAR},
+      </if>
+      <if test="record.currency != null">
+        currency = #{record.currency,jdbcType=VARCHAR},
+      </if>
+      <if test="record.inv != null">
+        inv = #{record.inv,jdbcType=VARCHAR},
+      </if>
+      <if test="record.lisubconam != null">
+        lisubconam = #{record.lisubconam,jdbcType=VARCHAR},
+      </if>
+      <if test="record.target != null">
+        target = #{record.target,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update yearreportsubcapitals
+    set ancheid = #{record.ancheid,jdbcType=VARCHAR},
+      condate = #{record.condate,jdbcType=VARCHAR},
+      conform = #{record.conform,jdbcType=VARCHAR},
+      currency = #{record.currency,jdbcType=VARCHAR},
+      inv = #{record.inv,jdbcType=VARCHAR},
+      lisubconam = #{record.lisubconam,jdbcType=VARCHAR},
+      target = #{record.target,jdbcType=VARCHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+</mapper>

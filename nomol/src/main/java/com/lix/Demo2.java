@@ -15,4 +15,8 @@ public class Demo2 implements Inters{
         System.out.println("demo2");
         return "Demo2{}";
     }
+
+    public static void main(String[] args) {
+        final Demox d = new Demox();
+    }
 }

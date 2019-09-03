@@ -3,9 +3,9 @@ package com.lix;
 public class Person {
     String name;
     String age;
-    String sex;
 
-    public String getName() {
+
+   public String getName() {
         return name;
     }
 
@@ -21,11 +21,4 @@ public class Person {
         this.age = age;
     }
 
-    public String getSex() {
-        return sex;
-    }
-
-    public void setSex(String sex) {
-        this.sex = sex;
-    }
 }

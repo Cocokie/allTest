@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lix.mapper.YearreportforguaranteesMapper">
+  <resultMap id="BaseResultMap" type="com.lix.domain.Yearreportforguarantees">
+    <result column="ancheid" jdbcType="VARCHAR" property="ancheid" />
+    <result column="gatype" jdbcType="VARCHAR" property="gatype" />
+    <result column="guarapperiod" jdbcType="VARCHAR" property="guarapperiod" />
+    <result column="more" jdbcType="VARCHAR" property="more" />
+    <result column="mortgagor" jdbcType="VARCHAR" property="mortgagor" />
+    <result column="pefperform" jdbcType="VARCHAR" property="pefperform" />
+    <result column="pefperto" jdbcType="VARCHAR" property="pefperto" />
+    <result column="priclasecam" jdbcType="VARCHAR" property="priclasecam" />
+    <result column="priclaseckind" jdbcType="VARCHAR" property="priclaseckind" />
+    <result column="rage" jdbcType="VARCHAR" property="rage" />
+    <result column="target" jdbcType="VARCHAR" property="target" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    ancheid, gatype, guarapperiod, more, mortgagor, pefperform, pefperto, priclasecam, 
+    priclaseckind, rage, target
+  </sql>
+  <select id="selectByExample" parameterType="com.lix.domain.YearreportforguaranteesExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from yearreportforguarantees
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <delete id="deleteByExample" parameterType="com.lix.domain.YearreportforguaranteesExample">
+    delete from yearreportforguarantees
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.lix.domain.Yearreportforguarantees">
+    insert into yearreportforguarantees (ancheid, gatype, guarapperiod, 
+      more, mortgagor, pefperform, 
+      pefperto, priclasecam, priclaseckind, 
+      rage, target)
+    values (#{ancheid,jdbcType=VARCHAR}, #{gatype,jdbcType=VARCHAR}, #{guarapperiod,jdbcType=VARCHAR}, 
+      #{more,jdbcType=VARCHAR}, #{mortgagor,jdbcType=VARCHAR}, #{pefperform,jdbcType=VARCHAR}, 
+      #{pefperto,jdbcType=VARCHAR}, #{priclasecam,jdbcType=VARCHAR}, #{priclaseckind,jdbcType=VARCHAR}, 
+      #{rage,jdbcType=VARCHAR}, #{target,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.lix.domain.Yearreportforguarantees">
+    insert into yearreportforguarantees
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="ancheid != null">
+        ancheid,
+      </if>
+      <if test="gatype != null">
+        gatype,
+      </if>
+      <if test="guarapperiod != null">
+        guarapperiod,
+      </if>
+      <if test="more != null">
+        more,
+      </if>
+      <if test="mortgagor != null">
+        mortgagor,
+      </if>
+      <if test="pefperform != null">
+        pefperform,
+      </if>
+      <if test="pefperto != null">
+        pefperto,
+      </if>
+      <if test="priclasecam != null">
+        priclasecam,
+      </if>
+      <if test="priclaseckind != null">
+        priclaseckind,
+      </if>
+      <if test="rage != null">
+        rage,
+      </if>
+      <if test="target != null">
+        target,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="ancheid != null">
+        #{ancheid,jdbcType=VARCHAR},
+      </if>
+      <if test="gatype != null">
+        #{gatype,jdbcType=VARCHAR},
+      </if>
+      <if test="guarapperiod != null">
+        #{guarapperiod,jdbcType=VARCHAR},
+      </if>
+      <if test="more != null">
+        #{more,jdbcType=VARCHAR},
+      </if>
+      <if test="mortgagor != null">
+        #{mortgagor,jdbcType=VARCHAR},
+      </if>
+      <if test="pefperform != null">
+        #{pefperform,jdbcType=VARCHAR},
+      </if>
+      <if test="pefperto != null">
+        #{pefperto,jdbcType=VARCHAR},
+      </if>
+      <if test="priclasecam != null">
+        #{priclasecam,jdbcType=VARCHAR},
+      </if>
+      <if test="priclaseckind != null">
+        #{priclaseckind,jdbcType=VARCHAR},
+      </if>
+      <if test="rage != null">
+        #{rage,jdbcType=VARCHAR},
+      </if>
+      <if test="target != null">
+        #{target,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.lix.domain.YearreportforguaranteesExample" resultType="java.lang.Long">
+    select count(*) from yearreportforguarantees
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update yearreportforguarantees
+    <set>
+      <if test="record.ancheid != null">
+        ancheid = #{record.ancheid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.gatype != null">
+        gatype = #{record.gatype,jdbcType=VARCHAR},
+      </if>
+      <if test="record.guarapperiod != null">
+        guarapperiod = #{record.guarapperiod,jdbcType=VARCHAR},
+      </if>
+      <if test="record.more != null">
+        more = #{record.more,jdbcType=VARCHAR},
+      </if>
+      <if test="record.mortgagor != null">
+        mortgagor = #{record.mortgagor,jdbcType=VARCHAR},
+      </if>
+      <if test="record.pefperform != null">
+        pefperform = #{record.pefperform,jdbcType=VARCHAR},
+      </if>
+      <if test="record.pefperto != null">
+        pefperto = #{record.pefperto,jdbcType=VARCHAR},
+      </if>
+      <if test="record.priclasecam != null">
+        priclasecam = #{record.priclasecam,jdbcType=VARCHAR},
+      </if>
+      <if test="record.priclaseckind != null">
+        priclaseckind = #{record.priclaseckind,jdbcType=VARCHAR},
+      </if>
+      <if test="record.rage != null">
+        rage = #{record.rage,jdbcType=VARCHAR},
+      </if>
+      <if test="record.target != null">
+        target = #{record.target,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update yearreportforguarantees
+    set ancheid = #{record.ancheid,jdbcType=VARCHAR},
+      gatype = #{record.gatype,jdbcType=VARCHAR},
+      guarapperiod = #{record.guarapperiod,jdbcType=VARCHAR},
+      more = #{record.more,jdbcType=VARCHAR},
+      mortgagor = #{record.mortgagor,jdbcType=VARCHAR},
+      pefperform = #{record.pefperform,jdbcType=VARCHAR},
+      pefperto = #{record.pefperto,jdbcType=VARCHAR},
+      priclasecam = #{record.priclasecam,jdbcType=VARCHAR},
+      priclaseckind = #{record.priclaseckind,jdbcType=VARCHAR},
+      rage = #{record.rage,jdbcType=VARCHAR},
+      target = #{record.target,jdbcType=VARCHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+</mapper>
